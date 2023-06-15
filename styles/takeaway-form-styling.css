@@ -1,0 +1,160 @@
+/* This .css file contains the CSS rules that specifically apply to the takeaway-order.html page */
+
+/* Remove styling of this element caused by a selector in the form-styling.css file */
+.takeaway-fieldset {
+  display:block;
+}
+
+form fieldset ul {
+  /* Remove default padding and margin of ul elements */
+  padding: 0;
+  margin: 0;
+}
+
+/* The element selected by the below selector spans two columns in its parent container's CSS grid and is itself a flex container */
+.quantity-container {
+  grid-column: 1 / span 2;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+/* Style the h3 headings in the takeaway form */
+.takeaway-section > h3 {
+  height: 3em;
+  font-size: 1.3em;
+}
+
+.takeaway-section > h3:after {
+  /* Use the below symbol to indicate the presence of a dropdown list. */
+  content: ' ▼';
+  font-size: 0.7em;
+}
+
+/* Indicate that all selected elements are interactive. */
+.takeaway-section * {
+  cursor: pointer;
+}
+
+/* Ensure that these li items are of sufficient height so that the user does not
+accidentally select the wrong item. */
+.takeaway-section li {
+  min-height: 2em;
+  padding: 1em 1em;
+  border-bottom: 1px solid green;
+}
+
+/* Add a background colour to hovered leaf-level li items to aid user navigation and selection. */
+.takeaway-section  li:hover, .takeaway-section h3:hover {
+background-color: #d2d3d2;
+}
+
+/* Increase font size of text in the ul elements to improve readability */
+.takeaway-section ul {
+  font-size: 1.2em;
+}
+
+/* Indicate to the user that a selection has been made. */
+.selected-item {
+  background-color: rgb(225, 234, 236);
+}
+
+.menu-item {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 1em;
+}
+
+.menu-item div:nth-child(4):not(ul.no-description *) {
+  /* Italicise menu item descriptions */
+  font-style: italic;
+}
+
+.menu-item div:nth-child(2) {
+  /* Bold prices */
+  font-weight: bold;
+}
+
+/* Center the elements contained within radio list containers */
+.radio-list > div {
+  display: flex;
+  align-items: center;
+}
+
+/* Bold the total price and apply other appropriate formatting to improve readability */
+.takeaway-select-price {
+  margin: 2em 0 2em 0;
+  width: 50%;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2em;
+}
+
+/* Create a one-column layout by default using CSS grid for summary items */
+.order-summary-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em 2em;
+  font-size: 1.1em;
+  margin-bottom: 3.5em;
+  min-width: fit-content;
+
+}
+
+/* Prevent the content of child divs of the container with class
+'order-summary-container' from having content that wraps multiple lines */
+.order-summary-container > div {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.order-summary-container > div > div {
+  width: 33%;
+}
+
+/* Increase the size of headings and bold them to improve readability */
+.summary-headings {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.order-summary-container > div > div:first-child {
+  font-weight: bold;
+}
+
+/* Bold the total price and increase its font size*/
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+/* Prevent the summary total from rendering too wide, which would look unusual*/
+.summary-total {
+  width: 78%;
+}
+
+/* The below media query applies its contained CSS rules for larger viewports */
+@media only screen and (min-width: 768px) {
+  /* The below selector creates a two-column layout in large viewports */
+  h3 + ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Prevent the prev and next buttons being displayed too high 
+  in the viewport */
+  .order-summary-container {
+    padding-bottom: 20vh;
+  }
+
+  /* Increase the width of the summary total for larger viewports */
+  .summary-total {
+      width: 73%;
+  }
+}

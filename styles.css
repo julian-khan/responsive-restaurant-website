@@ -1,0 +1,333 @@
+/* This .css file contains CSS selectors and rules that apply to every web page of this website. */
+
+/* Apply universal font styling to every element contained within the body element through inheritance. The margin of the
+body is set to 0 to eliminate the default margins applied to the body by the browser. */
+body {
+  font-family: sans-serif;
+  font-size: 1em;
+  background-color: #F8F8F8;
+  color: black;
+  margin: 0;
+}
+
+/* Set the width of the banner image so that it scales up and down with the viewport size. */
+header > picture img  {
+  width: 100%;
+  height:auto;
+  margin-bottom: -0.28em; /*Eliminates gap between banner image and nav bar. */
+}
+
+/* -- The following selectors format the nav element on each webpage, which contains
+the website's navigation links. -- */
+
+/* Set the nav bar's colour and border, as well as apply padding of 0.2em on all four sides. */
+header nav {
+  background-color: #448D76;
+  border: 2px solid rgb(12, 103, 80);
+  padding: 0.2em;
+}
+
+/* Set the width of the nav bar logo to 55px, which is the width of the image. Setting the width
+of images in this manner supports the browser to render the web page faster. */
+header nav img { 
+  height:55px;
+}
+
+/* When the viewport is less than 768px in width, hide the anchor elements that span across the nav bar. */
+header nav a:not(:first-child) {
+  display: none;
+}
+
+/* Style all anchor elements in the nav bar. */
+header nav > a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* Position the drop down menu, which will only be visible when the viewport is less than 758px in width,
+to the right and set the display mode to inline so that it does not wrap on to a new line in the nav bar. */
+header nav .hamburger-icon {
+  float: right;
+  display: inline;
+  position: relative;
+  color:white;
+  font-size: 3em;
+  padding:0 0.2em;
+}
+
+/* Hide the ul contained within the dropdown menu by default and remove the default dot points added to each 
+list item by the browser. */
+.hamburger-icon ul {
+  display: none;;
+  list-style-type: none;
+  font-size: 1rem;
+  padding: 0.2em;
+}
+
+/* Display the ul in the dropdown menu when the dropdown menu is hovered over and add styling. */
+.hamburger-icon:hover ul {
+  display: block;
+  position: absolute;
+  top: 3.6em;
+  right: 0;
+  width: 60vw;
+  padding:0;
+  margin:0;
+  border: 2px solid rgb(12, 103, 80);
+  background-color: #DCDCDC;
+}
+
+/* Format the li elements contained within the dropdown menu when it is hovered hover. */
+.hamburger-icon:hover ul li {
+  display: block;
+  border:1px solid ;
+  padding: 0;
+  margin:0;
+  border: 1px solid rgb(12, 103, 80);
+}
+
+/* format the anchor tags contained within the dropdown menu when it is hovered over. */
+.hamburger-icon:hover ul li a {
+  color: black;
+  display: block;
+  padding: 1em 0.5em;
+  text-decoration: none;
+}
+
+/* Change the colour of all elements in the nav bar when they are hovered over. */
+header nav *:hover  {
+  background-color:#00cc99;
+}
+/* -- End of nav bar formatting -- */
+
+/* Prevent web page from being lower in height than the viewport, which would cause the footer to rise in the browser frame. */
+.wrapper {
+  min-height: 96vh; 
+}
+
+main {
+  /* Set minimum height of the main element to prevent reduction in height of the web page when viewport is reduced in size */
+  margin-bottom: 1em; /* Prevent footer from being too close to the main content. */
+  padding: 0 1em;
+  line-height: 1.5em;
+}
+
+/* Format all images contained within the main element and prevent them from scaling up beyond the original size of the
+image by setting max-width to 100% and height to auto. */
+main img { 
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 2em auto;
+}
+
+picture { 
+  /*Setting max-width to 100% ensures that images can scale down in size when the viewport is reduced in width but prevents
+  the images from scaling up in size:
+  https://www.w3schools.com/css/css_rwd_images.asp
+
+  This has been undertaken to ensure that the images do not scale up to a bad quality when the viewport width is increased.
+  */
+  max-width: 100%; 
+  height: auto;
+}
+
+/* Set the font-size of the h1, h2 and h3 headings.*/
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+/* Set headings to have the same foreground (text) colour. */
+h1, h2, h3 {
+  color:#104710;
+  line-height: 1.2em;
+}
+
+code {
+  font-size: 1.1em;
+}
+
+/* Style visited hyperlinks in the main and footer elements to a specific colour. */
+main a:visited, footer a:visited {
+  color: rgb(130, 18, 87);
+}
+
+/* style the footer */
+footer {
+  font-size: 0.9em;
+  color:#2f3232;
+  background-color: #d2d3d2;
+  margin: 0;
+  padding: 1em 1em;
+}
+
+/* Add spacing in the form of padding to the footer's anchor tags. */
+footer nav a {
+  padding: 0.5em 1em 0.5em 0;
+}
+
+/* Remove the default dot point style provided by the browser for an unordered list's list items, if the unordered list is
+nested within another list item. The targeted list items are descendants of divs which are the not last div descendant of main.
+
+This selector is being used to remove the browser default dot point symbols of these nested list items on the
+membership-fees page.*/
+main > div:not(:last-of-type) li > ul > li {
+  list-style-type: none;
+}
+
+/* Add a tick symbol followed by a space before list items in the above-mentioned nested unordered lists. */
+main > div:not(:last-of-type) li > ul > li::before {
+  content: "✓ ";
+}
+
+/* Use CSS Grid to display the club's contact information in a two-column table. */
+.contact-info-grid {
+  display: grid;
+  column-gap: 1.5em;
+  row-gap: 1em;
+  grid-template-columns: auto auto;
+  max-width:max-content;
+}
+
+/* From the first element in the CSS grid mentioned above, bold the text of every second element (
+  these elements are the headings in the two-column structure). */
+.contact-info-grid div:nth-child(2n+1) {
+  font-weight: bold; /* Bold the contact information field names. */
+}
+
+.hidden, .dynamic.hidden {
+  display: none;
+}
+
+.two-col-layout li {
+  padding-bottom: 1em;
+}
+
+.report section {
+  margin-bottom: 2em;
+}
+
+/* The below min-width values was referenced from the W3Schools website:
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+*/
+
+/* Apply the below styling to medium sized screens, such as tablets in landscape mode and larger, through a media query. */
+@media only screen and (min-width: 768px) {
+
+  /* Display the anchor elements that were set to display: none with inline flow once the minimum width of the 
+  viewport is 768px. */
+  .home, header nav a:not(:first-child) {
+    display: inline;
+    float: left;
+    vertical-align: middle;
+  }
+
+  /* Add padding to all elements in the header's navigation bar except the first, in order to adequately space
+  the nav bar hyperlinks. */
+  header nav a:not(:first-child) {
+  padding: 1.32em 0.5em;
+  }
+
+  /* The nav contains floated elements. The below styling therefore needs to be applied to ensure that the nav bar's
+  height includes the height of these floated elements, otherwise the nav bar reduces to have minimal height. */
+  header nav:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Change the padding applied to the nav bar's logo for larger screen sizes. */
+  header nav img {
+    padding: 0.1em 1em;
+  }
+
+  /* Hide the nav bar's dropdown menu on larger devices because the nav bar's set of anchor tags that are hidden for smaller viewports are
+  displayed once the minimum viewport width is 768px. This is necessary to prevent two sets of identical links in the header's nav bar. */
+  header nav .hamburger-icon {
+    display: none;
+  }
+
+  /* Format main content on each web page to two columns using the 'row' and 'col' classes. The below technique was adapted 
+  from https://www.w3schools.com/howto/howto_css_two_columns.asp */
+  .col {
+    float: left;
+    width: 45%;
+       margin-right: 1em;
+  }
+
+  .row li { /*Add more padding to the right of list items that are in rows of two-columns. */
+    padding-right: 1.5em;
+    margin-bottom: 0.7em;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: left;
+  }
+
+  /* Divs and spans are not permitted by the HTML5 Living Standard to be descendants of a ul element. Therefore, the above technique of wrapping 
+  content with divs and assigning 'row' and 'col' classes to create a two-column layout would be a violation of HTML5 syntax. 
+  
+  The columns property therefore needs to be used to ensure a two column layout of ul list items, which is used to style the report.html page. */
+  ul.row, .two-col-layout{ 
+    columns: auto 2; /*Sets the width of the columns to auto and the number of columns to two. */
+    column-gap: 1.5em;
+  }
+
+  .menu-more-info {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 2em;
+    row-gap: 1em;
+    width: 60%;
+  }
+
+  .more-info > div {
+    grid-column: 1 / span 1;
+    width: 50%;
+    gap: 1em;
+  }
+
+  main.report {
+    max-width: 1150px;
+  }
+
+  .two-col-layout > p:first-child {
+    margin-top: 0;
+  }
+
+
+}
+
+/* The below media query applies its styling when the user attempts to print the web page. */
+@media print {
+  /* To prevent printer ink toner wastage, set the background colour of the document to white and the font-colour of all text to black. */
+  body {
+    color: black;
+    background-color: white;
+  }
+
+  /*Remove all images to reduce ink toner wastage (no images are necessary for printing on this website). */
+  nav, img, picture { 
+    display:none;
+  }
+
+  /*Remove the minimum height of the wrapper div so that the footer does not get printed on an additional page when the web page's content
+  does not span an entire page. */
+  div.wrapper { 
+    min-height: 0;
+  }
+}
+

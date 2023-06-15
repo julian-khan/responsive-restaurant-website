@@ -1,0 +1,116 @@
+/* This .css file contains the CSS rules that are specifically applied to the menu-styling.css page. */
+
+.menu-container {
+  /* Add a border and margin around each menu container to distinguish a menu from the background */
+  border-radius: 15px;
+  border: 2px solid rgb(187, 187, 187);
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+/* For smaller viewports this default selector creates a single-column layout */
+.menu-container dl {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1em;
+}
+
+/* Render menu items with no item description in a two-column layout for all viewports */
+.menu-container dl.no-item-descriptions {
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    column-gap: 2em;
+}
+
+.menu-container h2 {
+  font-size: 1.5em;
+}
+
+.menu-container h3 {
+  font-size: 1.3em;
+}
+
+/* Indicate that all selected elements are interactive. */
+.menu-select-button {
+  cursor: pointer;
+}
+
+.menu-container dl {
+  font-size: 1.1em;
+  margin-bottom: 2em;
+}
+
+.menu-item {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+gap: 0.5em;
+}
+
+/* The below selectors style the menu dt and dd elements */
+dt {
+  font-weight: bold;
+}
+
+dt::after {
+  content: ":";
+}
+
+dd {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  font-style: italic;
+}
+
+dd > span {
+  font-weight: bold;
+}
+
+/* Button styling */
+button {
+height: 2.5em;
+width:6em;
+border-radius: 12px;
+background-color: #7097c7;
+color: rgb(255, 255, 255);
+font-size: 1.3em;
+cursor: pointer;
+}
+
+/* Style buttons that are hovered over and are not active */
+button:hover:not(.active-button) {
+  background-color: #516a89;
+}
+
+.button-container {
+  margin: 2em 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.active-button {
+  background-color: #69a3ea;
+}
+
+/* The below media query applies its contained CSS rules when the viewport is at least 768px wide. */
+@media only screen and (min-width: 768px) {
+  .menu-container dl {
+    grid-template-columns: 1fr 3fr 1fr 3fr;
+    width: 100%;
+    column-gap: 2em;
+  }
+
+  .menu-container dd {
+    margin-inline-start: 0;
+    margin-right: 2em;
+  }
+
+  dd {
+  display: flex;
+  gap: 0.2em;
+  }
+
+}

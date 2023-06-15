@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- The HTML structuring on this page is similar to the structuring of the index.html document. Therefore, please refer to the index.html page
+for detailed comments about the structuring and purpose of the document's sections. -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Julian Khan">
+  <meta name="keywords" content="garden indian restaurant, indian restaurant, lunch, dinner">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/form-styling.css">
+  <link rel="stylesheet" href="styles/takeaway-form-styling.css">
+  <script src="scripts/takeaway-order.js"></script>
+  <title>Takeaway Order</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <picture>
+        <source class="banner" srcset="media/header-larger.jpg" media="(min-width: 768px)">
+        <img class="banner" src="media/header-smaller.jpg" alt="Website header image that displays several archery targets.">
+      </picture>
+      <nav>
+        <a href="index.html" class="home" title="Logo and home page link">
+          <picture>
+            <source srcset="media/Logo-larger.png" media="(min-width: 768px)">
+            <img src="media/Logo-smaller.png" alt="Company logo">
+          </picture>
+        </a>
+        <a href="menu.html" title="Lunch and dinner menu link">Menu</a>
+        <a href="javascript:void(0);" title="Takeaway order link">Takeaway order</a>
+        <a href="bookings.html" title="Link to make a booking">Bookings</a>
+        <a href="gallery.html" title="Gallery link">Gallery</a>
+        <a href="about-us.html" title="About us link">About</a>
+        <a href="report.html" title="Report link">Report</a>
+
+        <div class="hamburger-icon"><span>&#9776;</span>
+          <ul>
+            <li><a href="index.html" title="Home page link">Home</a></li>
+            <li><a href="menu.html" title="Lunch and dinner menu link">Menu</a></li>
+            <li><a href="bookings.html" title="Link to make a booking">Bookings</a></li>
+            <li><a href="gallery.html" title="Gallery link">Gallery</a></li>
+            <li><a href="about-us.html" title="About us link">About</a></li>
+            <li><a href="report.html" title="Report link">Report</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1>Make a takeaway order</h1>
+        <p>You can make a takeaway order by entering the required information below. We will have your order prepared as soon as possible. Payment
+          can be made on collection.
+        </p>
+        <form class="takeaway-form" action="" method="post">
+          <section class="section-1 form-section">
+            <!--The below div container contains the progress element, which is dynamically updated through
+            JavaScript. This progress element notifies the user of their progress through the form, based
+            on the number of successfully validated sections.-->
+            <div class="progress-container">
+              <label>Progress: <progress value="0" max="100"></progress></label>
+              <!--The below div container's span element is dynamically updated by JavaScript to inform the
+              user of the current form section that they are viewing.-->
+              <div class="section-number">Section <span></span></div>
+            </div>
+            <h2>General information</h2>
+            <p>Please add the required information below. Once complete, click 'Next' to move to the next section of the form. </p>
+            <h3>General details</h3>
+            <!--Fieldset tags have been used to group input tags that provide related information.-->
+            <fieldset>
+              <div class="std-label-input two-col">
+                <label for="first-name">First name<span>*</span></label>
+                <!--The placeholder attribute has been provided with a value for supported input elements
+                to aid the user in understanding the required type of information to input.-->
+                <input type="text" id="first-name" name="first-name" placeholder="John" required>
+              </div>
+              <div class="std-label-input two-col">
+                <label for="last-name">Last name<span>*</span></label>
+                <input type="text" id="last-name" name="last-name" placeholder="Smith" required>
+              </div>
+              <div class="email-wrapper std-label-input two-col">
+                <label for="table-email">Email<span>*</span></label>
+                <input type="email" id="table-email" name="email" placeholder="name@email.com" required>
+              </div>
+              <div class="contact-wrapper std-label-input two-col">
+                <label for="table-contact-number">Contact number<span>*</span></label>
+                <input type="tel" id="table-contact-number" name="contact-number" placeholder="04XXXXXXXX or 9XXXXXXX" required>
+              </div>
+
+              <!-- The below radio container is only visible to the user if the localStorage object of the Web Storage API is available
+              and a previous order is retrievable from the localStorage object-->
+              <div class="load-prev-container">
+                <p>Would you like to autofill with your previous order?</p>
+                <div class="radio-list">
+                  <div>
+                    <input type="radio" id="load-prev-order-yes" name="load-prev-order" value="yes">
+                    <label for="load-prev-order-yes">Yes</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="load-prev-order-no" name="load-prev-order" value="no">
+                    <label for="load-prev-order-no">No</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="std-label-input separate-rows">
+                <label for="table-more-info">Is there anything else that you would like to sure? Please share
+                  any allergies or special requests here.
+                </label>
+                <textarea name="table-more-info" id="table-more-info" cols="30" rows="4"></textarea>
+              </div>
+            </fieldset>
+            <div class="button-container">
+              <div></div>
+              <!--Back and next buttons enable the user to dynamically navigate sections of the form.-->
+              <button type="button" class="next">Next</button>
+            </div>
+          </section>
+
+          <section class="section-2 form-section">
+            <div class="progress-container">
+              <label>Progress: <progress value="0" max="100"></progress></label>
+              <div class="section-number">Section <span></span></div>
+            </div>
+            <h2>Order selections</h2>
+            <p>Please select the foods that you wish to order. All curries are gluten free and Halal.</p>
+            <p>All prices include GST and are subject to change without notice.</p>
+            <p>If you have any questions or issues, please call us on (03) 9568 1486.</p>
+            <fieldset class="takeaway-fieldset">
+              <section class="takeaway-section">
+                <h2>Takeaway</h2>
+                <p>The takeaway menu is available from 11:30 am - 2:30 pm and from 5.00 pm until 9:30 pm.</p>
+                <h3>Entrée</h3>
+                <ul>
+                  <li class="menu-item">
+                    <div>Vegetable Samosa</div>
+                    <div>$7.50</div>
+                    <div>Deep fried pastry stuffed with lightly spiced potatoes and green peas</div>
+
+                  </li>
+                  <li class="menu-item">
+                    <div>Onion Bhaji</div>
+                    <div>$7.50</div>
+                    <div>Coriander flavoured onion fritters</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Hara Bhara Kebab</div>
+                    <div>$12.00</div>
+                    <div>Shallow fried vegetable and spinach patties </div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Chicken Tikka</div>
+                    <div>$11.00</div>
+                    <div>Boneless marinated chicken grilled in tandoor </div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Seekh Kebab</div>
+                    <div>$10.00</div>
+                    <div>Spiced and skewed lamb mince cooked in tandoor </div>
+                  </li>
+                </ul>
+
+                <h3>Chicken</h3>
+                <ul>
+                  <li class="menu-item">
+                    <div>Chicken Tikka Masala (medium)</div>
+                    <div>$18.00</div>
+                    <div>Unique combination of spices cooked with onion, capsicum and tomato </div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Chicken Balti (medium)</div>
+                    <div>$18.00</div>
+                    <div>Boneless chicken cooked in medium spiced sauce with onion, capsicum and tomato</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Chicken Korma (mild)</div>
+                    <div>$18.00</div>
+                    <div>Chicken cooked in creamy cashew nut gravy</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Kadai Chicken (medium)</div>
+                    <div>$18.00</div>
+                    <div>Chicken cooked in kadai gravy</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Chicken Vindaloo (HOT)</div>
+                    <div>$18.00</div>
+                    <div>Spicy curry prepared in goan style</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Mysore Chicken (HOT)</div>
+                    <div>$18.00</div>
+                    <div>Chicken cooked with fresh chillies in coconut creamy sauce</div>
+                  </li>
+                </ul>
+
+                <h3>Lamb</h3>
+                <ul>
+                  <li class="menu-item">
+                    <div>Lamb Rogan Josh (medium)</div>
+                    <div>$19.00</div>
+                    <div>Lamb cooked in traditional north Indian style</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Lamb Korma (mild)</div>
+                    <div>$19.00</div>
+                    <div>Blend of creamy cashew nut gravy cooked with lamb</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Lamb Madras (medium)</div>
+                    <div>$19.00</div>
+                    <div>Creamy coconut based delicacy cooked to perfection</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Saag Lamb (mild to medium)</div>
+                    <div>$19.00</div>
+                    <div>Diced lamb cooked with spinach sauce</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Lamb Masala (medium)</div>
+                    <div>$19.00</div>
+                    <div>Lamb cooked in onion, tomato masala gravy</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Lamb Vindaloo (HOT)</div>
+                    <div>$19.00</div>
+                    <div>Spicy lamb curry prepared in Goan style</div>
+                  </li>
+                </ul>
+
+                <h3>Beef</h3>
+                <ul>
+                  <li class="menu-item">
+                    <div>Beef Rogan Josh (medium)</div>
+                    <div>$19.00</div>
+                    <div>Diced beef cooked in north Indian style</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Beef Masala (medium)</div>
+                    <div>$19.00</div>
+                    <div>Meat cooked with onion, tomato, capsicum in masala gravy</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Beef Korma (mild)</div>
+                    <div>$19.00</div>
+                    <div>Diced beef cooked in creamy cashew nut gravy</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Beef Madras (mild to medium)</div>
+                    <div>$19.00</div>
+                    <div>Combination of creamy coconut sauce cooked to perfection</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Beef Vindaloo (HOT)</div>
+                    <div>$19.00</div>
+                    <div>Spicy Goan style curry cooked to perfection</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Beef Pepper Fry (HOT)</div>
+                    <div>$19.00</div>
+                    <div>Spicy beef curry cooked with black pepper</div>
+                  </li>
+                </ul>
+
+                <h3>Seafood</h3>
+                <ul>
+                  <li class="menu-item">
+                    <div>Prawn Malabari (mild)</div>
+                    <div>$20.00</div>
+                    <div>Prawn cooked with onion, capsicum in coconut gravy</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Prawn / Fish Masala (medium)</div>
+                    <div>$20.00</div>
+                    <div>Combination of spices cooked with onion, tomato and capsicum</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Prawn Vindaloo (HOT)</div>
+                    <div>$20.00</div>
+                    <div>Spicy curry cooked in Goan style</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Butter Prawn (mild)</div>
+                    <div>$20.00</div>
+                    <div>Blend of creamy tomato gravy with prawn</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Goan Fish Curry (mild)</div>
+                    <div>$20.00</div>
+                    <div>Fish cooked with creamy coconut gravy</div>
+                  </li>
+                </ul>
+
+                <h3>Vegetarian</h3>
+                <ul>
+                  <li class="menu-item">
+                    <div>Butter Paneer (mild)</div>
+                    <div>$17.00</div>
+                    <div>Indian cottage cheese cooked in creamy tomato gravy</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Paneer Tikka Masala (medium)</div>
+                    <div>$17.00</div>
+                    <div>Cottage cheese with onion, tomato, capsicum and spiced gravy</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Kadai Paneer (medium) </div>
+                    <div>$17.00</div>
+                    <div>Cottage cheese cooked in kadai Gravy</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Paneer Bhurji (medium) </div>
+                    <div>$17.00</div>
+                    <div>Grated cottage cheese cooked with onion, capsicum in tomato sauce</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Palak Paneer (mild to medium)</div>
+                    <div>$17.00</div>
+                    <div>Cottage cheese cooked in mild spiced spinach sauce</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Achari Paneer (medium)</div>
+                    <div>$17.00</div>
+                    <div>Cottage cheese cooked in pickle sauce</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Vegetable Korma (mild)</div>
+                    <div>$17.00</div>
+                    <div>Mix vegetable cooked in creamy cashew nut gravy\</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Mix vegetable (medium)</div>
+                    <div>$16.00</div>
+                    <div>Fresh vegetable cooked in medium spiced gravy</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Chole Masala/Chole Palak (medium)</div>
+                    <div>$16.00</div>
+                    <div>Chickpeas cooked in onion tomato gravy or spinach sauce</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Malai Kofta (mild)</div>
+                    <div>$17.00</div>
+                    <div>Mashed potato, dry fruit and cottage cheese dumpling cooked in rich cashew nut gravy</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Aloo Gobi / Aloo Mutter (medium)</div>
+                    <div>$16.00</div>
+                    <div>Potatoes cooked with cauliflower or green peas in spiced sauce</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Saag Aloo (mild)</div>
+                    <div>$16.00</div>
+                    <div>Potatoes cooked in mild spiced spinach sauce</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Dal Tadka (mild to medium)</div>
+                    <div>$16.00</div>
+                    <div>Yellow split lentil tempered with garlic, tomato and onion</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Dal Makhani (medium)</div>
+                    <div>$16.00</div>
+                    <div>Black lentil & kidney beans cooked with tomato, cream and butter</div>
+                  </li>
+                </ul>
+
+                <h3>Tandoori Bread</h3>
+                <ul>
+                  <li class="menu-item">
+                    <div>Plain Naan</div>
+                    <div>$3.00</div>
+                    <div>Leavened refined flour bread</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Garlic Naan</div>
+                    <div>$4.00</div>
+                    <div>Garlic flavoured Naan</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Cheese Naan</div>
+                    <div>$5.00</div>
+                    <div>Naan stuffed with cheese</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Cheese & Garlic Naan</div>
+                    <div>$6.00</div>
+                    <div>Naan stuffed with cheese and smeared with garlic</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Peshawari Naan</div>
+                    <div>$5.00</div>
+                    <div>Naan stuffed with Nuts and Dry fruits</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Aloo Naan</div>
+                    <div>$5.00</div>
+                    <div>Naan stuffed with spiced mashed potatoes</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Kheema Naan/Paneer Naan</div>
+                    <div>$5.00</div>
+                    <div>Naan stuffed with spiced lamb mince or spiced cottage cheese</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Chilli Naan</div>
+                    <div>$4.00</div>
+                    <div>Naan containing chilli</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Spinach Naan</div>
+                    <div>$4.00</div>
+                    <div>Naan containing spinach</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Cheese & Chilli Naan</div>
+                    <div>$5.00</div>
+                    <div>Naan containing cheese and chilli</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Cheese & Spinach Naan</div>
+                    <div>$5.00</div>
+                    <div>Naan containing cheese and spinach</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Roti</div>
+                    <div>$3.00</div>
+                    <div>Wholemeal bread</div>
+                  </li>
+                </ul>
+
+                <h3>Rice</h3>
+                <ul class="no-description">
+                  <li class="menu-item">
+                    <div>Steamed Rice</div>
+                    <div>$3.00</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Saffron Rice</div>
+                    <div>$6.00</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Coconut Rice</div>
+                    <div>$6.00</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Jeera Peas Rice</div>
+                    <div>$6.00</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Biryani Rice</div>
+                    <div>$6.00</div>
+                  </li>
+                </ul>
+
+                <h3>Sides</h3>
+                <ul class="no-description">
+                  <li class="menu-item">
+                    <div>Papadams</div>
+                    <div>$3.00</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Cucumber Raita</div>
+                    <div>$3.00</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Sweet Mango Chutney</div>
+                    <div>$3.00</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Mint Sauce</div>
+                    <div>$3.00</div>
+                  </li>
+                  <li class="menu-item">
+                    <div>Pickles</div>
+                    <div>$3.00</div>
+                  </li>
+                </ul>
+
+                <div>
+                  <input id="food-selections-input" type="hidden" class="required" name="food-selections" value="">
+                </div>
+              </section>
+            </fieldset>
+
+            <div class="takeaway-select-price">
+              <div>Total: </div>
+              <div class="price">$0</div>
+            </div>
+
+            <section>
+              <h3>Additional information</h3>
+              <div class="menu-more-info">
+                <div>Phone: (03) 9568 1486</div>
+                <div>Licenced and BYO Wine only</div>
+                <div>All curries Gluten Free & Halal</div>
+                <div>Conferences and group bookings accepted</div>
+                <div>All prices include GST. Prices are subject to change without notice</div>
+              </div>
+            </section>
+
+            <div class="button-container">
+              <button type="button" class="prev">Previous</button>
+              <button type="button" class="next takeaway-select">Next</button>
+            </div>
+          </section>
+
+
+          <section class="section-3 form-section">
+            <div class="progress-container">
+              <label>Progress: <progress value="0" max="100"></progress></label>
+              <div class="section-number">Section <span></span></div>
+            </div>
+            <h2>Order confirmation</h2>
+            <p>
+              Please view your selections. If you wish to make any changes, use the back button
+              to change your selections.
+            </p>
+
+            <div class="order-summary-container">
+              <div class="summary-headings">
+                <div>Item</div>
+                <div>Quantity</div>
+                <div>Price</div>
+              </div>
+            </div>
+
+            <div class="summary-total-container"></div>
+
+            <div class="button-container">
+              <button type="button" class="prev">Previous</button>
+              <button type="button" class="next">Next</button>
+            </div>
+          </section>
+
+          <section class="section-4 form-section">
+            <div class="progress-container">
+              <label>Progress: <progress value="0" max="100"></progress></label>
+              <div class="section-number">Section <span></span></div>
+            </div>
+            <h2>Anything else?</h2>
+            <p>
+              Is there anything else you would like to share with us so that we can
+              maximise your travel experience?
+            </p>
+            <div class="std-label-input separate-rows">
+              <label for="any-other-info">Please enter anything else you would like to share.</label>
+              <textarea id="any-other-info" name="any-other-info"></textarea>
+            </div>
+            <p>If you are happy with your order, please press submit below.</p>
+            <div class="button-container">
+              <button type="button" class="prev">Previous</button>
+              <button type="submit">Submit form</button>
+            </div>
+          </section>
+        </form>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <nav>
+      <a href="index.html" title="Home page link">Home page</a>
+      <a href="menu.html" title="Lunch and dinner menu link">Menu</a>
+      <a href="bookings.html" title="Link to make a booking">Bookings</a>
+      <a href="gallery.html" title="Gallery link">Gallery</a>
+      <a href="about-us.html" title="About us link">About</a>
+      <a href="report.html" title="Report link">Report</a>
+    </nav>
+    <p>Created by Julian Khan</p>
+  </footer>
+  <script>main()</script>
+</body>
+
+</html>

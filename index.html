@@ -1,0 +1,131 @@
+<!DOCTYPE html> <!--This syntax specifies that this file is an HTML5 document. -->
+<!-- Specify that the language of this HTML document is English. -->
+<html lang="en">
+<!-- Comments for the main elements and components that are common to every web page of this site are provided on this page because 
+it is the main page (the index.html file). -->
+
+<!-- The header tag contains meta data that can assist search engine crawlers with indexing the web page and HTML
+parsers with parsing the document. -->
+
+<head>
+  <meta charset="UTF-8"> <!--Specify that the character encoding of this document is UTF-8-->
+  <!-- The below meta tags respectively provide meta data relating to the document's author and keywords relevant to the document. -->
+  <meta name="author" content="Julian Khan">
+  <meta name="keywords" content="garden indian restaurant, indian restaurant, lunch, dinner">
+  <!-- setting the viewport to width=device-width ensures that the viewport will be the dimensions of the
+  client device's screen-width. The initial-scale to 1 sets the initial zoom level to 1 (no zoom).
+  These actions are necessary for responsive design of the web page, as explained in the below link:
+  https://www.w3schools.com/css/css_rwd_viewport.asp
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The below link tag imports the site's CSS style sheet so that styling can be applied to the HTML elements. -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Set the title of the web page, which is visible in the browser frame and in search engine results. -->
+  <title>Garden Indian Restaurant</title>
+</head>
+
+<!-- The body element contains the majority of the document's content. -->
+
+<body>
+  <!-- The below div wraps all content in the body element except for the footer. This div is then targeted 
+  using a CSS selector to ensure that the minimum height of this content is always a particular size,
+  to prevent the web page height from being less than the browser window when there is not a large amount
+  of content on the page. -->
+  <div class="wrapper">
+    <!-- The header element contains the site's navigation bar. The link to the current page performs no action when clicked
+    because its href attribute has been set to javascript:void(0);, which causes the anchor tag, when clicked, to execute
+    JavaScript code that returns undefined. -->
+    <header>
+      <!-- The picture element uses a media query to render a larger version of the image when the client device's screen
+      width is at least 768 pixels wide. If the screen is less than this width, the default smaller image contained in the 
+      img tag is rendered.
+  
+      The picture element therefore provides responsive design for image rendering, based on the user's screen size. -->
+      <picture>
+        <!-- Original banner image from: https://unsplash.com/photos/WM0qTXnH41Q -->
+        <source srcset="media/header-larger.jpg" media="(min-width: 768px)">
+        <img src="media/header-smaller.jpg" alt="Website header image that displays a signature restaurant dish.">
+      </picture>
+      <nav>
+        <a href="javascript:void(0);" class="home" title="Logo and home page link">
+          <picture>
+            <!--Logo created with Canva and background removed with https://www.adobe.com/express/feature/image/remove-background-->
+            <source srcset="media/Logo-larger.png" media="(min-width: 768px)">
+            <img src="media/Logo-smaller.png" alt="Company logo">
+          </picture>
+        </a>
+        <!-- Title attributes have been added to all anchor tags on the website to enhance accessability. -->
+        <a href="menu.html" title="Lunch and dinner menu link">Menu</a>
+        <a href="takeaway-order.html" title="Takeaway order link">Takeaway order</a>
+        <a href="bookings.html" title="Link to make a booking">Bookings</a>
+        <a href="gallery.html" title="Gallery link">Gallery</a>
+        <a href="about-us.html" title="About us link">About</a>
+        <a href="report.html" title="Report link">Report</a>
+
+        <div class="hamburger-icon"><span>&#9776;</span> <!--This div contains the dropdown navigation menu which is 
+        only displayed when the user's screen width is less than 768px (refer to the stylesheet). -->
+          <ul>
+            <li><a href="menu.html" title="Lunch and dinner menu link">Menu</a></li>
+            <li><a href="takeaway-order.html" title="Takeaway order link">Takeaway order</a></li>
+            <li><a href="bookings.html" title="Link to make a booking">Bookings</a></li>
+            <li><a href="gallery.html" title="Gallery link">Gallery</a></li>
+            <li><a href="about-us.html" title="About us link">About</a></li>
+            <li><a href="report.html" title="Report link">Report</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- The main element contains the document's primary content, as suggested by the W3 HTML specification. -->
+    <main>
+
+      <!-- For larger screen widths, the primary content in all web pages on this site is rendered in a two-column
+        format. This has been achieved by wrapping rows of content with divs with the 'row' class and columns
+        with divs that have the 'col' class.
+      
+        Refer to the CSS stylesheet for how the two-column layout has been implemented. -->
+      <!--The primary heading of the web page is set using the h1 tag. -->
+
+      <h1>Welcome</h1>
+
+      <p>
+        The Garden Indian Restaurant provides a wide range of dishes, comprised of quality ingredients and good combination of spices,
+        entice your tastebuds and please don’t hesitate to make a special requests.
+      </p>
+
+      <picture>
+        <source srcset="media/lamb-rogan-josh-larger.jpg" media="(min-width: 768px)">
+        <img src="media/lamb-rogan-josh-smaller.jpg" alt="Lamb rogan josh">
+      </picture>
+
+      <p>
+        We guarantee meals of excellent quality, specially prepared to satisfy your taste of mild, medium, hot or very hot food. We
+        suggest you visit us to sample different combinations of original Indian food from our vast menu to truly appreciate the
+        unique flavours of our diverse range of dishes.
+      </p>
+
+      <p>
+        We are fully licensed but you may BYO wine as well. Please try our takeaway service whether you are in your office, or organising
+        something special. We can host your private functions. The restaurant can be booked for the function of your choice and it is equipped
+        with a plasma screen and a full sound system to ensure the entertainment of your guests.
+      </p>
+      <hr>
+      <p>Please refer to our <a href="about-us.html" title="Link to the About Us page">About Us</a> page for our address
+        and contact information. </p>
+    </main>
+  </div>
+  <footer>
+    <!-- Per convention and to improve accessability, the footer contains navigation links to aid the user's navigation, as well as information
+    about the author of the document. A link to the current page is not provided. -->
+    <nav>
+      <a href="menu.html" title="Lunch and dinner menu link">Menu</a>
+      <a href="takeaway-order.html" title="Takeaway order link">Takeaway order</a>
+      <a href="bookings.html" title="Link to make a booking">Bookings</a>
+      <a href="gallery.html" title="Gallery link">Gallery</a>
+      <a href="about-us.html" title="About us link">About</a>
+      <a href="report.html" title="Report link">Report</a>
+    </nav>
+    <p>Created by Julian Khan</p>
+  </footer>
+</body>
+
+</html>

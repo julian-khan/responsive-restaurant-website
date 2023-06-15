@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- The HTML structuring on this page is similar to the structuring of the index.html document. Therefore, please refer to the index.html page
+for detailed comments about the structuring and purpose of the document's sections. -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Julian Khan">
+  <meta name="keywords" content="garden indian restaurant, indian restaurant, lunch, dinner">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/menu-styling.css">
+  <script src="scripts/menu-page.js"></script>
+  <title>Menu</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+      <picture>
+        <source class="banner" srcset="media/header-larger.jpg" media="(min-width: 768px)">
+        <img class="banner" src="media/header-smaller.jpg" alt="Website header image that displays several archery targets.">
+      </picture>
+      <nav>
+        <a href="index.html" class="home" title="Logo and home page link">
+          <picture>
+            <source srcset="media/Logo-larger.png" media="(min-width: 768px)">
+            <img src="media/Logo-smaller.png" alt="Company logo">
+          </picture>
+        </a>
+        <a href="javascript:void(0);" title="Lunch and dinner menu link">Menu</a>
+        <a href="takeaway-order.html" title="Takeaway order link">Takeaway order</a>
+        <a href="bookings.html" title="Link to make a booking">Bookings</a>
+        <a href="gallery.html" title="Gallery link">Gallery</a>
+        <a href="about-us.html" title="About us link">About</a>
+        <a href="report.html" title="Report link">Report</a>
+
+        <div class="hamburger-icon"><span>&#9776;</span>
+          <ul>
+            <li><a href="index.html" title="Home page link">Home</a></li>
+            <li><a href="takeaway-order.html" title="Takeaway order link">Takeaway order</a></li>
+            <li><a href="bookings.html" title="Link to make a booking">Bookings</a></li>
+            <li><a href="gallery.html" title="Gallery link">Gallery</a></li>
+            <li><a href="about-us.html" title="About us link">About</a></li>
+            <li><a href="report.html" title="Report link">Report</a></li>
+          </ul>
+        </div>
+
+      </nav>
+    </header>
+    <main>
+      <!-- Section tags wrap the primary sections of content in the document. These tags improve the readability of the HTML and 
+      make the semantic meaning of the major sections of content clearer. -->
+      <section>
+        <h1>Menu</h1>
+        <p>Please browse our lunch and dinner menus on this page</p>
+        <p>Have any questions about our menu? Please either call us at (03) 9568 1486 or email
+          <a href="mailto:thegarden@c-link.com.au" title="Email the restaurant">thegarden@c-link.com.au</a>.
+        </p>
+        <p>To request a booking, please visit out<a href="bookings.html" title="Link to the bookings page"> bookings page</a>.</p>
+        <p>Takeaway orders can be made online on our
+          <a href="takeaway-order.html" title="Link to the takeaway order page">takeaway orders page</a>.
+        </p>
+      </section>
+
+      <div class="button-container menu-buttons">
+        <button type="button" class="lunch-menu-button">Lunch</button>
+        <button type="button" class="dinner-menu-button">Dinner</button>
+        <button type="button" class="takeaway-menu-button">Takeaway</button>
+      </div>
+
+      <section class="menu-container lunch-menu">
+        <h2>Lunch</h2>
+        <p>The lunch menu is available from 11:30 am until 2:30 pm.</p>
+        <p>Choose a curry from the lunchtime special menu below. Dish accompanied by plain rice and plain naan</p>
+        <h3>Entrée</h3>
+        <!-- Heading elements are not permitted to be children of dl elements. Therefore, separate dl tags have been included
+        for the different sections of the menu, each of which is marked by a heading element. 
+      
+        dl, dt and dd elements have been used to represent the restaurant's menus because these elements best represent the menus semantically. Choosing
+        the appropriate elements, rather than just simply ul elements, is important for effective semantic markup which is the purpose of HTML.-->
+        <dl>
+          <dt>Vegetable Samosa</dt>
+          <dd>Deep fried pastry stuffed with lightly spiced potatoes and green peas
+            <span>$7.50</span>
+          </dd>
+
+          <dt>Chicken Tikka</dt>
+          <dd>Boneless marinated chicken grilled in tandoor
+            <span>$11.00</span>
+          </dd>
+
+          <dt>Seekh Kebab</dt>
+          <dd>Spiced and skewed lamb mince cooked in tandoor
+            <span>$10.00</span>
+          </dd>
+
+        </dl>
+
+        <h3>Chicken</h3>
+        <dl>
+          <dt>Butter Chicken (mild)</dt>
+          <dd>Boneless chicken grilled in tandoor and finished with creamy tomato gravy
+            <span>$18.00</span>
+          </dd>
+
+          <dt>Chicken Balti (medium)</dt>
+          <dd>Boneless chicken cooked in medium spiced sauce with onion, capsicum and tomat
+            <span>$18.00</span>
+          </dd>
+
+          <dt>Chicken Madras (mild to medium)</dt>
+          <dd>Creamy coconut based delicacy cooked to perfection
+            <span>$18.00</span>
+          </dd>
+
+        </dl>
+
+        <h3>Lamb</h3>
+        <dl>
+          <dt>Lamb Rogan Josh (medium)</dt>
+          <dd>Lamb cooked in traditional north Indian style
+            <span>$19.00</span>
+          </dd>
+
+          <dt>Lamb Korma (mild)</dt>
+          <dd>Blend of creamy cashew nut gravy cooked with lamb
+            <span>$19.00</span>
+          </dd>
+          <dt>Lamb Madras (medium)</dt>
+          <dd>Creamy coconut based delicacy cooked to perfection
+            <span>$19.00</span>
+          </dd>
+          <dt>Lamb Masala (medium)</dt>
+          <dd>Lamb cooked in onion, tomato masala gravy
+            <span>$19.00</span>
+          </dd>
+          <dt>Lamb Vindaloo (HOT)</dt>
+          <dd>Spicy lamb curry prepared in Goan style
+            <span>$19.00</span>
+          </dd>
+        </dl>
+
+        <h3>Beef</h3>
+        <dl>
+          <dt>Beef Madras (mild to medium)</dt>
+          <dd>Combination of creamy coconut sauce cooked to perfection
+            <span>$19.00</span>
+          </dd>
+        </dl>
+
+        <h3>Vegetarian</h3>
+        <dl>
+          <dt>Paneer Tikka Masala (medium)</dt>
+          <dd>Cottage cheese with onion, tomato, capsicum and spiced gravy
+            <span>$17.00</span>
+          </dd>
+          <dt>Mix vegetable (medium)</dt>
+          <dd>Fresh vegetable cooked in medium spiced gravy
+            <span>$16.00</span>
+          <dt>Vegetable Madras (mild to medium)</dt>
+          <dd>Creamy coconut based delicacy cooked to perfection
+            <span>$16.00</span>
+          </dd>
+          <dt>Chole Masala/Chole Palak (medium)</dt>
+          <dd>Chickpeas cooked in onion tomato gravy or spinach sauce
+            <span>$16.00</span>
+          </dd>
+          <dt>Aloo Gobi / Aloo Mutter (medium)</dt>
+          <dd>Potatoes cooked with cauliflower or green peas in spiced sauce
+            <span>$16.00</span>
+          </dd>
+          <dt>Dal Tadka (mild to medium)</dt>
+          <dd>Yellow split lentil tempered with garlic, tomato and onion
+            <span>$16.00</span>
+          </dd>
+          <dt>Dal Makhani (medium)</dt>
+          <dd>Black lentil & kidney beans cooked with tomato, cream and butter
+            <span>$16.00E</span>
+          </dd>
+        </dl>
+      </section>
+
+      <section class="menu-container dinner-menu">
+        <h2>Dinner</h2>
+        <p>The dinner menu is available from 5.00 pm until 9:30 pm.</p>
+        <h3>Entrée</h3>
+        <dl>
+          <dt>Vegetable Samosa</dt>
+          <dd>Deep fried pastry stuffed with lightly spiced potatoes and green peas
+            <span>$8.00</span>
+          </dd>
+          <dt>Onion Bhaji</dt>
+          <dd>Coriander flavoured onion fritters
+            <span>$8.00</span>
+          </dd>
+          <dt>Chicken Tikka</dt>
+          <dd>Boneless marinated chicken grilled in tandoor
+            <span>$12.00</span>
+          </dd>
+          <dt>Seekh Kebab</dt>
+          <dd>Spiced and skewed lamb mince cooked in tandoor
+            <span>$12.00</span>
+          </dd>
+        </dl>
+
+        <h3>Chicken</h3>
+        <dl>
+          <dt>Chicken Tikka Masala (medium)</dt>
+          <dd>Unique combination of spices cooked with onion, capsicum and tomato
+            <span>$20.00</span>
+          </dd>
+          <dt>Chicken Balti (medium)</dt>
+          <dd>Boneless chicken cooked in medium spiced sauce with onion, capsicum and tomato
+            <span>$20.00
+            </span>
+          </dd>
+          <dt>Chicken Korma (mild)</dt>
+          <dd>Chicken cooked in creamy cashew nut gravy
+            <span>$20.00</span>
+          </dd>
+          <dt>Kadai Chicken (medium)</dt>
+          <dd>Chicken cooked in kadai gravy
+            <span>$20.00</span>
+          </dd>
+          <dt>Chicken Vindaloo (HOT)</dt>
+          <dd>Spicy curry prepared in goan style
+            <span>$20.00</span>
+          </dd>
+          <dt>Mysore Chicken (HOT)</dt>
+          <dd>Chicken cooked with fresh chillies in coconut creamy sauce
+            <span>$20.00</span>
+          </dd>
+        </dl>
+
+        <h3>Lamb</h3>
+        <dl>
+          <dt>Lamb Rogan Josh (medium)</dt>
+          <dd>Lamb cooked in traditional north Indian style
+            <span>$20.00</span>
+          </dd>
+          <dt>Lamb Korma (mild)</dt>
+          <dd>Blend of creamy cashew nut gravy cooked with lamb
+            <span>$20.00</span>
+          </dd>
+          <dt>Lamb Madras (medium)</dt>
+          <dd>Creamy coconut based delicacy cooked to perfection
+            <span>$20.00</span>
+          </dd>
+          <dt>Saag Lamb (mild to medium)</dt>
+          <dd>Diced lamb cooked with spinach sauce
+            <span>$20.00</span>
+          </dd>
+          <dt>Lamb Masala (medium)</dt>
+          <dd>Lamb cooked in onion, tomato masala gravy
+            <span>$20.00</span>
+          </dd>
+          <dt>Lamb Vindaloo (HOT)</dt>
+          <dd>Spicy lamb curry prepared in Goan style
+            <span>$20.00</span>
+          </dd>
+        </dl>
+
+        <h3>Beef</h3>
+        <dl>
+          <dt>Beef Rogan Josh (medium)</dt>
+          <dd>Diced beef cooked in north Indian style
+            <span>$20.00</span>
+          </dd>
+          <dt>Beef Masala (medium)</dt>
+          <dd>Meat cooked with onion, tomato, capsicum in masala gravy
+            <span>$20.00</span>
+          </dd>
+          <dt>Beef Korma (mild)</dt>
+          <dd>Diced beef cooked in creamy cashew nut gravy
+            <span>$20.00</span>
+          </dd>
+          <dt>Beef Madras (mild to medium)</dt>
+          <dd>Combination of creamy coconut sauce cooked to perfection
+            <span>$20.00</span>
+          </dd>
+          <dt>Beef Vindaloo (HOT)</dt>
+          <dd>Spicy Goan style curry cooked to perfection
+            <span>$20.00</span>
+          </dd>
+          <dt>Beef Pepper Fry (HOT)</dt>
+          <dd>Spicy beef curry cooked with black pepper
+            <span>$20.00</span>
+          </dd>
+        </dl>
+
+        <h3>Seafood</h3>
+        <dl>
+          <dt>Prawn Malabari (mild)</dt>
+          <dd>Prawn cooked with onion, capsicum in coconut gravy
+            <span>$22.00</span>
+          </dd>
+
+          <dt>Prawn / Fish Masala (medium)</dt>
+          <dd>Combination of spices cooked with onion, tomato and capsicum
+            <span>$22.00</span>
+          </dd>
+
+          <dt>Prawn Vindaloo (HOT)</dt>
+          <dd>Spicy curry cooked in Goan style
+            <span>$22.00</span>
+          </dd>
+
+          <dt>Butter Prawn (mild)</dt>
+          <dd>Blend of creamy tomato gravy with prawn
+            <span>$22.00</span>
+          </dd>
+
+          <dt>Goan Fish Curry (mild)</dt>
+          <dd>Fish cooked with creamy coconut gravy
+            <span>$22.00</span>
+          </dd>
+
+        </dl>
+
+        <h3>Vegetarian</h3>
+        <dl>
+          <dt>Butter Paneer (mild)</dt>
+          <dd>Indian cottage cheese cooked in creamy tomato gravy
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Paneer Tikka Masala (medium)</dt>
+          <dd>Cottage cheese with onion, tomato, capsicum and spiced gravy
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Kadai Paneer (medium) </dt>
+          <dd>Cottage cheese cooked in kadai Gravy
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Paneer Bhurji (medium) </dt>
+          <dd>Grated cottage cheese cooked with onion, capsicum in tomato sauce
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Palak Paneer (mild to medium)</dt>
+          <dd>Cottage cheese cooked in mild spiced spinach sauce
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Achari Paneer (medium)</dt>
+          <dd>Cottage cheese cooked in pickle sauce
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Vegetable Korma (mild)</dt>
+          <dd>Mix vegetable cooked in creamy cashew nut gravy
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Mix vegetable (medium)</dt>
+          <dd>Fresh vegetable cooked in medium spiced gravy
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Vegetable Madras (mild to medium)</dt>
+          <dd>Creamy coconut based delicacy cooked to perfection
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Vegetable Jalfrezi (medium)</dt>
+          <dd>Fresh vegetable cooked in tomato gravy
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Chole Masala/Chole Palak (medium)</dt>
+          <dd>Chickpeas cooked in onion tomato gravy or spinach sauce
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Malai Kofta (mild)</dt>
+          <dd>Mashed potato, dry fruit and cottage cheese dumpling cooked in rich cashew nut gravy
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Aloo Gobi / Aloo Mutter (medium)</dt>
+          <dd>Potatoes cooked with cauliflower or green peas in spiced sauce
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Saag Aloo (mild)</dt>
+          <dd>Potatoes cooked in mild spiced spinach sauce
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Bombay Potatoes dry (mild)</dt>
+          <dd>Potatoes tempered with cumin seed, curry leaves and coriander
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Dal Tadka (mild to medium)</dt>
+          <dd>Yellow split lentil tempered with garlic, tomato and onion
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Dal Makhani (medium)</dt>
+          <dd>Black lentil & kidney beans cooked with tomato, cream and butter
+            <span>$17.00</span>
+          </dd>
+
+        </dl>
+
+        <h3>Tandoori Bread</h3>
+        <dl>
+          <dt>Plain Naan</dt>
+          <dd>Leavened refined flour bread
+            <span>$3.00</span>
+          </dd>
+
+          <dt>Garlic Naan</dt>
+          <dd>Garlic flavoured Naan
+            <span>$4.00</span>
+          </dd>
+
+          <dt>Cheese Naan</dt>
+          <dd>Naan stuffed with cheese
+            <span>$5.00</span>
+          </dd>
+
+          <dt>Cheese & Garlic Naan</dt>
+          <dd>Naan stuffed with cheese and smeared with garlic
+            <span>$6.00</span>
+          </dd>
+
+          <dt>Peshawari Naan</dt>
+          <dd>Naan stuffed with Nuts and Dry fruits
+            <span>$5.00</span>
+          </dd>
+
+          <dt>Aloo Naan</dt>
+          <dd>Naan stuffed with spiced mashed potatoes
+            <span>$5.00</span>
+          </dd>
+
+          <dt>Kheema Naan/Paneer Naan</dt>
+          <dd>Naan stuffed with spiced lamb mince or spiced cottage cheese
+            <span>$5.00</span>
+          </dd>
+
+          <dt>Chilli Naan</dt>
+          <dd>Naan containing chilli
+            <span>$4.00</span>
+          </dd>
+
+          <dt>Spinach Naan</dt>
+          <dd>Naan containing spinach
+            <span>$4.00</span>
+          </dd>
+
+          <dt>Cheese & Chilli Naan</dt>
+          <dd>Naan containing cheese and chilli
+            <span>$5.00</span>
+          </dd>
+
+          <dt>Cheese & Spinach Naan</dt>
+          <dd>Naan containing cheese and spinach
+            <span>$5.00</span>
+          </dd>
+
+          <dt>Roti</dt>
+          <dd>Wholemeal bread
+            <span>$3.00</span>
+          </dd>
+
+          <dt>Paratha</dt>
+          <dd>Flaky wholemeal bread
+            <span>$3.00</span>
+          </dd>
+
+        </dl>
+
+        <h3>Rice</h3>
+        <dl class="no-item-descriptions">
+          <dt>Steamed Rice</dt>
+          <dd>
+            <span>$3.00</span>
+          </dd>
+
+          <dt>Saffron Rice</dt>
+          <dd>
+            <span>$6.00</span>
+          </dd>
+
+          <dt>Coconut Rice</dt>
+          <dd>
+            <span>$6.00</span>
+          </dd>
+
+          <dt>Jeera Peas Rice</dt>
+          <dd>
+            <span>$6.00</span>
+          </dd>
+
+          <dt>Biryani Rice</dt>
+          <dd>
+            <span>$6.00</span>
+          </dd>
+
+        </dl>
+
+        <h3>Sides</h3>
+        <dl class="no-item-descriptions">
+          <dt>Papadams</dt>
+          <dd>
+            <span>$3.00</span>
+          </dd>
+
+          <dt>Cucumber Raita</dt>
+          <dd>
+            <span>$3.00</span>
+          </dd>
+
+          <dt>Sweet Mango Chutney</dt>
+          <dd>
+            <span>$3.00</span>
+          </dd>
+
+          <dt>Mint Sauce</dt>
+          <dd>
+            <span>$3.00</span>
+          </dd>
+
+          <dt>Pickles</dt>
+          <dd>
+            <span>$3.00</span>
+          </dd>
+
+        </dl>
+      </section>
+
+      <section class="menu-container takeaway-menu">
+        <h2>Takeaway</h2>
+        <p>The takeaway menu is available from 11:30 am - 2:30 pm and from 5.00 pm until 9:30 pm.</p>
+        <p>Takeaway orders can be made online on our
+          <a href="takeaway-order.html" title="Link to the takeaway order page">takeaway orders page</a>.
+        </p>
+        <h3>Entrée</h3>
+        <dl>
+          <dt>Vegetable Samosa</dt>
+          <dd>Deep fried pastry stuffed with lightly spiced potatoes and green peas
+            <span>$7.50</span>
+          </dd>
+
+          <dt>Onion Bhaji</dt>
+          <dd>Coriander flavoured onion fritters
+            <span>$7.50</span>
+          </dd>
+
+          <dt>Hara Bhara Kebab</dt>
+          <dd>Shallow fried vegetable and spinach patties
+            <span>$12.00</span>
+          </dd>
+
+          <dt>Chicken Tikka</dt>
+          <dd>Boneless marinated chicken grilled in tandoor
+            <span>$11.00</span>
+          </dd>
+
+          <dt>Seekh Kebab</dt>
+          <dd>Spiced and skewed lamb mince cooked in tandoor
+            <span>$10.00</span>
+          </dd>
+
+        </dl>
+
+        <h3>Chicken</h3>
+        <dl>
+          <dt>Chicken Tikka Masala (medium)</dt>
+          <dd>Unique combination of spices cooked with onion, capsicum and tomato
+            <span>$18.00</span>
+          </dd>
+
+          <dt>Chicken Balti (medium)</dt>
+          <dd>Boneless chicken cooked in medium spiced sauce with onion, capsicum and tomato
+            <span>$18.00</span>
+          </dd>
+
+          <dt>Chicken Korma (mild)</dt>
+          <dd>Chicken cooked in creamy cashew nut gravy
+            <span>$18.00</span>
+          </dd>
+
+          <dt>Kadai Chicken (medium)</dt>
+          <dd>Chicken cooked in kadai gravy
+            <span>$18.00</span>
+          </dd>
+
+          <dt>Chicken Vindaloo (HOT)</dt>
+          <dd>Spicy curry prepared in goan style
+            <span>$18.00</span>
+          </dd>
+
+          <dt>Mysore Chicken (HOT)</dt>
+          <dd>Chicken cooked with fresh chillies in coconut creamy sauce
+            <span>$18.00</span>
+          </dd>
+
+        </dl>
+
+        <h3>Lamb</h3>
+        <dl>
+          <dt>Lamb Rogan Josh (medium)</dt>
+          <dd>Lamb cooked in traditional north Indian style
+            <span>$19.00</span>
+          </dd>
+
+          <dt>Lamb Korma (mild)</dt>
+          <dd>Blend of creamy cashew nut gravy cooked with lamb
+            <span>$19.00</span>
+          </dd>
+
+          <dt>Lamb Madras (medium)</dt>
+          <dd>Creamy coconut based delicacy cooked to perfection
+            <span>$19.00</span>
+          </dd>
+
+          <dt>Saag Lamb (mild to medium)</dt>
+          <dd>Diced lamb cooked with spinach sauce
+            <span>$19.00</span>
+          </dd>
+
+          <dt>Lamb Masala (medium)</dt>
+          <dd>Lamb cooked in onion, tomato masala gravy
+            <span>$19.00</span>
+          </dd>
+
+          <dt>Lamb Vindaloo (HOT)</dt>
+          <dd>Spicy lamb curry prepared in Goan style
+            <span>$19.00</span>
+          </dd>
+
+        </dl>
+
+        <h3>Beef</h3>
+        <dl>
+          <dt>Beef Rogan Josh (medium)</dt>
+          <dd>Diced beef cooked in north Indian style
+            <span>$19.00</span>
+          </dd>
+
+          <dt>Beef Masala (medium)</dt>
+          <dd>Meat cooked with onion, tomato, capsicum in masala gravy
+            <span>$19.00</span>
+          </dd>
+
+          <dt>Beef Korma (mild)</dt>
+          <dd>Diced beef cooked in creamy cashew nut gravy
+            <span>$19.00</span>
+          </dd>
+
+          <dt>Beef Madras (mild to medium)</dt>
+          <dd>Combination of creamy coconut sauce cooked to perfection
+            <span>$19.00</span>
+          </dd>
+
+          <dt>Beef Vindaloo (HOT)</dt>
+          <dd>Spicy Goan style curry cooked to perfection
+            <span>$19.00</span>
+          </dd>
+
+          <dt>Beef Pepper Fry (HOT)</dt>
+          <dd>Spicy beef curry cooked with black pepper
+            <span>$19.00</span>
+          </dd>
+
+        </dl>
+
+        <h3>Seafood</h3>
+        <dl>
+          <dt>Prawn Malabari (mild)</dt>
+          <dd>Prawn cooked with onion, capsicum in coconut gravy
+            <span>$20.00</span>
+          </dd>
+
+          <dt>Prawn / Fish Masala (medium)</dt>
+          <dd>Combination of spices cooked with onion, tomato and capsicum
+            <span>$20.00</span>
+          </dd>
+
+          <dt>Prawn Vindaloo (HOT)</dt>
+          <dd>Spicy curry cooked in Goan style
+            <span>$20.00</span>
+          </dd>
+
+          <dt>Butter Prawn (mild)</dt>
+          <dd>Blend of creamy tomato gravy with prawn
+            <span>$20.00</span>
+          </dd>
+
+          <dt>Goan Fish Curry (mild)</dt>
+          <dd>Fish cooked with creamy coconut gravy
+            <span>$20.00</span>
+          </dd>
+
+        </dl>
+
+        <h3>Vegetarian</h3>
+        <dl>
+          <dt>Butter Paneer (mild)</dt>
+          <dd>Indian cottage cheese cooked in creamy tomato gravy
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Paneer Tikka Masala (medium)</dt>
+          <dd>Cottage cheese with onion, tomato, capsicum and spiced gravy
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Kadai Paneer (medium) </dt>
+          <dd>Cottage cheese cooked in kadai Gravy
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Paneer Bhurji (medium) </dt>
+          <dd>Grated cottage cheese cooked with onion, capsicum in tomato sauce
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Palak Paneer (mild to medium)</dt>
+          <dd>Cottage cheese cooked in mild spiced spinach sauce
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Achari Paneer (medium)</dt>
+          <dd>Cottage cheese cooked in pickle sauce
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Vegetable Korma (mild)</dt>
+          <dd>Mix vegetable cooked in creamy cashew nut gravy
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Mix vegetable (medium)</dt>
+          <dd>Fresh vegetable cooked in medium spiced gravy
+            <span>$16.00</span>
+          </dd>
+
+          <dt>Chole Masala/Chole Palak (medium)</dt>
+          <dd>Chickpeas cooked in onion tomato gravy or spinach sauce
+            <span>$16.00</span>
+          </dd>
+
+          <dt>Malai Kofta (mild)</dt>
+          <dd>Mashed potato, dry fruit and cottage cheese dumpling cooked in rich cashew nut gravy
+            <span>$17.00</span>
+          </dd>
+
+          <dt>Aloo Gobi / Aloo Mutter (medium)</dt>
+          <dd>Potatoes cooked with cauliflower or green peas in spiced sauce
+            <span>$16.00</span>
+          </dd>
+
+          <dt>Saag Aloo (mild)</dt>
+          <dd>Potatoes cooked in mild spiced spinach sauce
+            <span>$16.00</span>
+          </dd>
+
+          <dt>Dal Tadka (mild to medium)</dt>
+          <dd>Yellow split lentil tempered with garlic, tomato and onion
+            <span>$16.00</span>
+          </dd>
+
+          <dt>Dal Makhani (medium)</dt>
+          <dd>Black lentil & kidney beans cooked with tomato, cream and butter
+            <span>$16.00</span>
+          </dd>
+
+        </dl>
+
+        <h3>Tandoori Bread</h3>
+        <dl>
+          <dt>Plain Naan</dt>
+          <dd>Leavened refined flour bread
+            <span>$3.00</span>
+          </dd>
+
+          <dt>Garlic Naan</dt>
+          <dd>Garlic flavoured Naan
+            <span>$4.00</span>
+          </dd>
+
+          <dt>Cheese Naan</dt>
+          <dd>Naan stuffed with cheese
+            <span>$5.00</span>
+          </dd>
+
+          <dt>Cheese & Garlic Naan</dt>
+          <dd>Naan stuffed with cheese and smeared with garlic
+            <span>$6.00</span>
+          </dd>
+
+          <dt>Peshawari Naan</dt>
+          <dd>Naan stuffed with Nuts and Dry fruits
+            <span>$5.00</span>
+          </dd>
+
+          <dt>Aloo Naan</dt>
+          <dd>Naan stuffed with spiced mashed potatoes
+            <span>$5.00</span>
+          </dd>
+
+          <dt>Kheema Naan/Paneer Naan</dt>
+          <dd>Naan stuffed with spiced lamb mince or spiced cottage cheese
+            <span>$5.00</span>
+          </dd>
+
+          <dt>Chilli Naan</dt>
+          <dd>Naan containing chilli
+            <span>$4.00</span>
+          </dd>
+
+          <dt>Spinach Naan</dt>
+          <dd>Naan containing spinach
+            <span>$4.00</span>
+          </dd>
+
+          <dt>Cheese & Chilli Naan</dt>
+          <dd>Naan containing cheese and chilli
+            <span>$5.00</span>
+          </dd>
+
+          <dt>Cheese & Spinach Naan</dt>
+          <dd>Naan containing cheese and spinach
+            <span>$5.00</span>
+          </dd>
+
+          <dt>Roti</dt>
+          <dd>Wholemeal bread
+            <span>$3.00</span>
+          </dd>
+
+        </dl>
+
+        <h3>Rice</h3>
+        <dl class="no-item-descriptions">
+          <dt>Steamed Rice</dt>
+          <dd>
+            <span>$3.00</span>
+          </dd>
+
+          <dt>Saffron Rice</dt>
+          <dd>
+            <span>$6.00</span>
+          </dd>
+
+          <dt>Coconut Rice</dt>
+          <dd>
+            <span>$6.00</span>
+          </dd>
+
+          <dt>Jeera Peas Rice</dt>
+          <dd>
+            <span>$6.00</span>
+          </dd>
+
+          <dt>Biryani Rice</dt>
+          <dd>
+            <span>$6.00</span>
+          </dd>
+
+        </dl>
+
+        <h3>Sides</h3>
+        <dl class="no-item-descriptions">
+          <dt>Papadams</dt>
+          <dd>
+            <span>$3.00</span>
+          </dd>
+
+          <dt>Cucumber Raita</dt>
+          <dd>
+            <span>$3.00</span>
+          </dd>
+
+          <dt>Sweet Mango Chutney</dt>
+          <dd>
+            <span>$3.00</span>
+          </dd>
+
+          <dt>Mint Sauce</dt>
+          <dd>
+            <span>$3.00</span>
+          </dd>
+
+          <dt>Pickles</dt>
+          <dd>
+            <span>$3.00</span>
+          </dd>
+
+        </dl>
+      </section>
+      <a href="#header" title="Return to top">Return to top</a>
+      <section>
+        <h3>Additional information</h3>
+        <div class="menu-more-info">
+          <div>Phone: (03) 9568 1486</div>
+          <div>Licenced and BYO Wine only</div>
+          <div>All curries Gluten Free & Halal</div>
+          <div>Conferences and group bookings accepted</div>
+          <div>All prices include GST. Prices are subject to change without notice</div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <nav>
+      <a href="index.html" title="Home page link">Home page</a>
+      <a href="takeaway-order.html" title="Takeaway order link">Takeaway order</a>
+      <a href="bookings.html" title="Link to make a booking">Bookings</a>
+      <a href="gallery.html" title="Gallery link">Gallery</a>
+      <a href="about-us.html" title="About us link">About</a>
+      <a href="report.html" title="Report link">Report</a>
+    </nav>
+    <p>Created by Julian Khan</p>
+  </footer>
+  <script>main()</script>
+</body>
+
+</html>

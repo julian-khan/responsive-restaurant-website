@@ -1,0 +1,11 @@
+
+.opening-hours-grid {
+    max-width: 620px; /*Prevent the table from becoming too wide on large viewports */
+    display:grid;
+    grid-template-columns: auto auto auto;
+}
+
+/* Bold the days of the week because these are row headings */
+.opening-hours-grid .col-heading, .opening-hours-grid .row-day  {
+    font-weight: bold;
+}

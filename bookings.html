@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- The HTML structuring on this page is similar to the structuring of the index.html document. Therefore, please refer to the index.html page
+for detailed comments about the structuring and purpose of the document's sections. -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Julian Khan">
+  <meta name="keywords" content="garden indian restaurant, indian restaurant, lunch, dinner">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/form-styling.css">
+  <script src="scripts/table-booking.js"></script>
+  <title>Bookings</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <picture>
+        <source class="banner" srcset="media/header-larger.jpg" media="(min-width: 768px)">
+        <img class="banner" src="media/header-smaller.jpg" alt="Website header image that displays several archery targets.">
+      </picture>
+      <nav>
+        <a href="index.html" class="home" title="Logo and home page link">
+          <picture>
+            <source srcset="media/Logo-larger.png" media="(min-width: 768px)">
+            <img src="media/Logo-smaller.png" alt="Company logo">
+          </picture>
+        </a>
+        <a href="menu.html" title="Lunch and dinner menu link">Menu</a>
+        <a href="takeaway-order.html" title="Takeaway order link">Takeaway order</a>
+        <a href="javascript:void(0);" title="Link to make a booking">Bookings</a>
+        <a href="gallery.html" title="Gallery link">Gallery</a>
+        <a href="about-us.html" title="About us link">About</a>
+        <a href="report.html" title="Report link">Report</a>
+
+        <div class="hamburger-icon"><span>&#9776;</span>
+          <ul>
+            <li><a href="index.html" title="Home page link">Home</a></li>
+            <li><a href="menu.html" title="Lunch and dinner menu link">Menu</a></li>
+            <li><a href="takeaway-order.html" title="Takeaway order link">Takeaway order</a></li>
+            <li><a href="gallery.html" title="Gallery link">Gallery</a></li>
+            <li><a href="about-us.html" title="About us link">About</a></li>
+            <li><a href="report.html" title="Report link">Report</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1>Bookings</h1>
+      <p>We accept table bookings for lunch or dinner and larger conference or group bookings. An
+        online booking can be made for either service below by completing the below form. The restaurant will email
+        you to confirm your booking.
+      </p>
+
+      <h2>Table bookings for lunch or dinner</h2>
+      <p>The Garden is available for table bookings for lunch or dinner. To make a table booking, click the
+        below button.
+      </p>
+      <p>The Garden also caters for group bookings of up to 30 people. Large bookings can also be made
+        with the below form.
+      </p>
+
+      <form action="" method="post">
+        <h2>Make a booking</h2>
+        <p>Please add the required information below to make a table or group booking. Please note
+          that we are closed on Mondays. The restaurant will email you to confirm your reservation.
+        </p>
+
+        <fieldset>
+          <!--The two-col class is used to render the containing elements in a two-column format on
+          larger viewports such as laptops and computer monitors.-->
+          <div class="std-label-input two-col">
+            <label for="table-name">Name<span>*</span></label>
+            <!--The placeholder attribute has been provided with a value for supported input elements
+            to aid the user in understanding the required type of information to input.-->
+            <input type="text" id="table-name" name="name" placeholder="John Smith" required>
+          </div>
+          <div class="email-wrapper std-label-input two-col">
+            <label for="table-email">Email<span>*</span></label>
+            <input type="email" id="table-email" name="email" placeholder="name@email.com" required>
+          </div>
+          <div class="contact-wrapper std-label-input two-col">
+            <label for="table-contact-number">Contact number<span>*</span></label>
+            <input type="tel" id="table-contact-number" name="contact-number" placeholder="04XXXXXXXX or 9XXXXXXX" required>
+          </div>
+
+          <div class="checkbox-container">
+            <label for="booking-large-group">Booking for a large group (10 or more people) or an event</label>
+            <input type="checkbox" id="booking-large-group" name="booking-large-group">
+          </div>
+
+          <div class="std-label-input two-col date-container">
+            <label for="booking-date">Preferred date<span>*</span></label>
+            <input type="date" id="booking-date" name="table-date" max="2028-01-01" required>
+          </div>
+
+          <!-- The below template is used by table-booking.js to dynamically create two date components, if the
+          user selects that the booking is for a large group or event. This is necessary, so that the user can supply
+          a total of three preferred dates per the assignment specification. -->
+          <template class="date-template">
+            <div class="dynamic date-container std-label-input two-col">
+              <label for="booking-date-">Preferred date </label>
+              <input type="date" id="booking-date-" name="booking-date-" required>
+            </div>
+          </template>
+
+          <div class="std-label-input">
+            <label for="table-num-people">Number of people</label>
+            <input type="number" id="table-num-people" name="num-people" min="1" max="7" step="1" value="2">
+          </div>
+
+          <div class="std-label-input">
+            <label for="table-time">Preferred time<span>*</span></label>
+            <select id="table-time" name="table-time" required>
+              <option value="">--Please select an option</option>
+              <!-- Assuming that the restaurant does not wish to accept lunch bookings later than 2 pm, which
+                  is 30 min before close during the lunch period. -->
+              <optgroup label="Lunch">
+                <option value="11:30am">11:30 am</option>
+                <option value="11:45am">11:45 am</option>
+                <option value="12:00pm">12:00 pm</option>
+                <option value="12:15pm">12:15 pm</option>
+                <option value="12:30pm">12:30 pm</option>
+                <option value="12:45pm">12:45 pm</option>
+                <option value="1:00pm">1:00 pm</option>
+                <option value="1:15pm">1:15 pm</option>
+                <option value="1:30pm">1:30 pm</option>
+                <option value="1:45pm">1:45 pm</option>
+                <option value="2:00pm">2:00 pm</option>
+              </optgroup>
+              <!-- Assuming that the restaurant does not wish to accept dinner bookings later than 8:30 pm, which
+                is one hour before close during the dinner period. -->
+              <optgroup label="Dinner">
+                <option value="5:30pm">5:30 pm</option>
+                <option value="5:45pm">5:45 pm</option>
+                <option value="6:00pm">6:00 pm</option>
+                <option value="6:15pm">6:15 pm</option>
+                <option value="6:30pm">6:30 pm</option>
+                <option value="6:45pm">6:45 pm</option>
+                <option value="7:00pm">7:00 pm</option>
+                <option value="7:15pm">7:15 pm</option>
+                <option value="7:30pm">7:30 pm</option>
+                <option value="7:45pm">7:45 pm</option>
+                <option value="8:00pm">8:00 pm</option>
+                <option value="8:15pm">8:15 pm</option>
+                <option value="8:30pm">8:30 pm</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="std-label-input separate-rows">
+            <label for="table-more-info">Is there anything else that you would like to sure? Please share
+              any allergies or special requests here.
+            </label>
+            <textarea name="table-more-info" id="table-more-info" cols="30" rows="4"></textarea>
+          </div>
+          <div class="submit-container">
+            <input type="submit">
+          </div>
+        </fieldset>
+      </form>
+    </main>
+  </div>
+  <footer>
+    <nav>
+      <a href="index.html" title="Home page link">Home page</a>
+      <a href="menu.html" title="Lunch and dinner menu link">Menu</a>
+      <a href="takeaway-order.html" title="Takeaway order link">Takeaway order</a>
+      <a href="gallery.html" title="Gallery link">Gallery</a>
+      <a href="about-us.html" title="About us link">About</a>
+      <a href="report.html" title="Report link">Report</a>
+    </nav>
+    <p>Created by Julian Khan</p>
+  </footer>
+  <script>main()</script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+/* This file contains the CSS rules specific to the gallery.html page*/
+
+h1 {
+    /* Use flexbox to centre the main page heading */
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    text-align: center;
+}
+
+em {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+/* Remove the picture element's default line-height value */
+picture {
+    line-height: 0;
+}
+
+/* Add padding to enhance readability */
+.gallery-image-container {
+     padding: 1em 0 2em 0;
+}
+
+/* The below media query adapts the layout of the page for larger viewports */
+@media only screen and (min-width: 768px) {
+    main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* The below CSS rule creates a two-column layout using CSS grid */
+.gallery-image-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+    max-width: fit-content;
+}
+
+.gallery-image-container img {
+    margin: 0;
+    width: 100%;
+}
+
+}

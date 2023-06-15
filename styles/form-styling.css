@@ -1,0 +1,345 @@
+
+/* Form styling */
+
+form { 
+  min-width: 320px; /*Prevent the form's width from becoming too small, which could cause formatting issues. */
+  padding: 1em;
+  border-radius: 15px;
+  border: 2px solid rgb(187, 187, 187);
+}
+
+form h2 {
+  font-size: 1.7em;
+}
+
+.invisible, .dynamic.invisible, div.checkbox-container > .invisible:last-child { /*Selectors with higher specificity used to override other selectors for these target elements */
+  display: none; /*Hide elements that should not be visible to the user. The invisible class is toggled for particular elements using JavaScript to hide or display them. */
+}
+
+section.invisible, div.invisible {
+  display: none;
+}
+
+
+form label > span, .lunch-or-dinner span, .required {
+  /* Style required input's labels to indicate to the user that information must be entered for these inputs. */
+  color: red; 
+}
+
+form {
+  /* Flexbox has been used to style the the majority of the form due to its flexibility in layout adjustments. */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+form fieldset { /* Major form section containers */
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 2em;
+  padding: 0;
+  border-width: 0; /*Do not display the border of fieldset elements, in case a default border is displayed by the browser.*/
+}
+
+.progress-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.std-label-input {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 95%;
+  font-size: 1.1em;
+}
+
+.radio-container div {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 0.5em;
+  font-weight: 300;
+}
+
+.radio-container > div:first-child{
+  font-weight: 600;
+  padding-top: 1em;
+}
+
+.radio-container div label {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+}
+
+div.radio-container .radio-list {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.radio-list > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.budget-heading {
+  font-size: 1.4em;
+  color: #185068;
+}
+
+input[type=radio] {
+  width: 1.5em;
+  flex: 0 0 auto;
+}
+
+input, select, textarea {
+  border: 2px solid rgba(226, 223, 223, 0.831);
+  border-radius: 7px;
+  max-width: 600px;
+  width: 70vw;
+  cursor: pointer;
+}
+
+input, .lunch-or-dinner{
+  height: 2.2em;
+  font-size: 1.1em;
+}
+
+.lunch-or-dinner {
+  margin-bottom: -2em;
+}
+
+label[for=any-other-info] {
+  text-align: start;
+}
+
+select {
+  height: 2.2em;
+  text-align: center;
+  font-size: 1.1em; 
+}
+
+input[type=checkbox] {
+  height: 2em;
+  width: 2em;
+  
+}
+
+input[type=number] {
+  width: 15%;
+  height: 2em;
+  text-align: center;
+}
+
+input {
+  text-align: center;
+}
+
+input:focus, input:hover, label:hover + input, select:hover  {
+  /* Add a border color for inputs and labels when they are focused on or hovered over to 
+  assist the user in identifying inputs and their respective labels. */
+  border-color: rgb(13, 135, 235);
+}
+
+textarea {
+  height: 4em;
+}
+
+label, .lunch-or-dinner {
+  font-weight:600 ;
+}
+
+label span:before, .lunch-or-dinner span:before {
+  /* Add a white space character before the required symbol */
+  content: "\00a0";
+}
+
+/* Use a pointer cursor to indicate to the user that labels can be used to focus on inputs or toggle checkboxes. */
+label:hover {
+  cursor: pointer;
+}
+
+label[for=num-children], label[for=contact-number] {
+  margin-bottom: 0.5em;
+}
+
+/* Lay out the form buttons using flexbox. */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Style the back, next and submit buttons. */
+button, input[type=submit] {
+  height: 2.5em;
+  width:6em;
+  border-radius: 12px;
+  background-color: #7097c7;
+  color: rgb(255, 255, 255);
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.checkbox-container, .checkbox-list .checkbox-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.checkbox-container input[type=checkbox] {
+  align-self: center;
+}
+
+.checkbox-container label {
+ display: flex;
+ align-items: center;
+}
+
+fieldset.checkbox-selection-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2em;
+}
+
+input[name=num-children] {
+  align-self: center;
+}
+
+.date-container.standard-label-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dynamic .checkbox-container label {
+  font-weight: 300;
+}
+
+/* Form validation selectors */
+
+/* The below class is added to any elements that fail client-side input validation, to notify
+the user that their input information needs to be corrected before proceeding to the next
+section of the form. */
+.invalid {
+  border-color: red;
+}
+
+/* Dynamically added error messages are styled using the below selected class to draw the user's attention
+to the invalid fields. */
+.error-message {
+  color: red;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+/* Apply the below styling to medium sized screens, such as tablets in landscape mode and larger, through a media query. */
+@media only screen and (min-width: 768px) {
+
+  .form-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form {
+    max-width: 1200px;
+  }
+
+  div.std-label-input {
+      grid-template-columns: 1fr 2fr;
+  }
+
+  .error-message {
+    grid-column: 1 / span 2;
+  }
+
+  .checkbox-selection-list p {
+    width: 100%;
+  }
+
+  .checkbox-selection-list .checkbox-container {
+    flex-direction: row;
+    width: 40%;
+  }
+
+  .checkbox-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .checkbox-container label {
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  .checkbox-container input[type=checkbox] {
+    flex-shrink: 0;
+    align-self: baseline;
+  }
+
+
+  .dynamic p {
+    width: 100%;
+  }
+
+  form select, form textarea {
+    width: 15em;
+  }
+
+  form input {
+    width: 90%;
+    grid-column: 2;
+  }
+
+  input[type=date] {
+    width: 18em;
+  }
+
+  input[type=number] {
+    width: 4em;
+  }
+
+  form fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3em;
+  }
+
+  fieldset h3 {
+    width: 100%;
+  }
+
+  div.separate-rows {
+    grid-column: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  div.separate-rows textarea {
+    width: 80%;
+    height: 7em;
+  }
+
+  /* Align the submit button to the right */
+  .submit-container {
+      grid-column: 1 / span 2;
+  }
+}
+
