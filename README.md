@@ -4,7 +4,7 @@
 Live website:
 https://julian-khan.github.io/responsive-restaurant-website/
 
-In this project, I designed and created a website for a restaurant. Before creating the website, I analysed the requirements of the restaurant and users' needs by constructing user stories. I then used this information to inform the structuring of the website and its features.
+In this project, I designed and created the front end of a restaurant website. Before creating the website, I analysed the requirements of the restaurant and users' needs by constructing user stories. I then used this information to inform the structuring of the website and its features.
 
 HTML5 was used for the semantic markup of each webpage, which is its intended purpose per the HTML Living Standard. CSS3 rules were used in separate CSS files to style each page. Global selectors that apply styling to all pages are contained in the styles.css file. Selectors for specific webpages are contained in separate .css files in the style folder of this project. The separation of the website's structuring through HTML and styling via CSS provides a separation of concerns, which makes debugging and maintaining the website, as well as adding new features, an easier process.
 
