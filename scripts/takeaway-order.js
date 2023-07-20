@@ -383,13 +383,10 @@ function updateTotal() {
     const quantityInputs = [...document.querySelectorAll('.quantity')];
     quantityInputs.forEach((numInput) => {
         itemTotal = 0
-
         itemTotal = getItemTotal(numInput.closest('.menu-item'));
-
         currentTotal += itemTotal;
     })
     currentTotal = currentTotal.toFixed(2);
-
     insertTotal(currentTotal);
     return currentTotal;
 }
