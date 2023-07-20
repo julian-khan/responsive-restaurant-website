@@ -133,16 +133,20 @@ function manageGlobalErrorMessage(formSectionElement, isError) {
             sectionGlobalErrorElement.classList.remove('invisible');
         }
         else {
-            let errorPara = document.createElement('p');
-            errorPara.textContent = 'There is an error in the input for one or more fields. Please check your entries.';
-            errorPara.classList.add('dynamic', 'error-message', 'section-global-error');
-
+            const errorPara = createErrorPara();
             const insertLocation = formSectionElement.querySelector('.button-container');
             insertLocation.before(errorPara);
         }   
     } else {
         sectionGlobalErrorElement ? sectionGlobalErrorElement.classList.add('invisible') : null;
     }
+}
+
+function createErrorPara() {
+    let errorPara = document.createElement('p');
+    errorPara.textContent = 'There is an error in the input for one or more fields. Please check your entries.';
+    errorPara.classList.add('dynamic', 'error-message', 'section-global-error');
+    return errorPara;
 }
 
 function createErrorMessageStr(inputElement) {
