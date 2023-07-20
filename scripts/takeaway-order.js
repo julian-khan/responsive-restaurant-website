@@ -28,7 +28,7 @@ function updateFoodSelectedInput() {
 
     for (let i = 0; i < foodCheckboxes.length; i++) {
         if (foodCheckboxes[i].checked) {
-            foodSelectionsInput.value= 'true';
+            foodSelectionsInput.value = 'true';
             return;
         }
     }
@@ -40,7 +40,7 @@ const nextButtonEventHandler = (e) => {
     /*The below conditional prevents the below code from being executed when click events occur on non-button elements. 
     This is needed because the parent form section is handling click events for its child buttons (event delegation). */
     if (!(e.target.nodeName === "BUTTON" && e.target.className.includes('next'))) { 
-        return
+        return;
     }
 
     const targetContainer = e.target.closest('.form-section');
