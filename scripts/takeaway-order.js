@@ -603,11 +603,7 @@ function restoreLastOrder() {
     const allFoodInputs = document.querySelectorAll('.menu-item input[type=checkbox]');
 
     for (let i = 0; i < lastOrder.length; i++) {
-        index = lastOrder[i].index;
-
-        const correspondingInput = allFoodInputs[index];
-
-        correspondingInput.checked = true;
+        const correspondingInput = toggleInputCheckbox(lastOrder[i], allFoodInputs);
         /* Fire the checked event to create the required quantity box. Need to do this because
         a change event is not fired if JavaScript is used to change the checkbox's checked property.
 
@@ -621,6 +617,13 @@ function restoreLastOrder() {
     }
     // Dynamically update the total cost of the order after the previous order's selections have been restored
     updateTotal();
+}
+
+function toggleInputCheckbox(orderItem, allFoodInputs) {
+    index = orderItem.index;
+    const correspondingInput = allFoodInputs[index];
+    correspondingInput.checked = true;
+    return correspondingInput;
 }
 
 function notLoadPrevOrder() {
