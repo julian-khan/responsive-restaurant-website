@@ -20,7 +20,7 @@ If I were to repeat this project or modify its design, I would encapsulate the d
 
 Although this project can be improved, it demonstrates the application of what I have learned in my Master of Information Technology degree to date and the independent learning that I have undertaken by completing The Odin Project and reading the Mozilla MDN documentation.
 
-Please let me know if you have any feedback - I would appreciate input on how I can improve my software engineering skills.
+Please let me know if you have any feedback. I would appreciate input on how I can improve my software engineering skills.
 
 Yours faithfully
 
