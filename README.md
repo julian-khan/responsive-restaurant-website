@@ -19,9 +19,3 @@ This website conforms to accessibility guidelines and is highly responsive on al
 If I were to repeat this project or modify its design, I would encapsulate the data used in the .js script files into classes. This would provide the benefits of object-oriented design and object-oriented programming such as encapsulation, inheritance and polymorphism. I would also add a back end using a technology such as Firebase to receive and process booking requests and online orders.
 
 Although this project can be improved, it demonstrates the application of what I have learned in my Master of Information Technology degree to date and the independent learning that I have undertaken by completing The Odin Project and reading the Mozilla MDN documentation.
-
-Please let me know if you have any feedback. I would appreciate input on how I can improve my software engineering skills.
-
-Yours faithfully
-
-Julian
